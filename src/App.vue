@@ -1,12 +1,18 @@
 <template>
   <div>
-    <h1>Componente padre</h1>
-    <Personaje v-for="(personaje, i) in personajes" :key="i" :fotoPersonaje="personaje.img" :nombrePersonaje="personaje.nombre" />
+    <h1>Personajes de "Rick & Morty"</h1>
+    <section class="card-wrapper">
+      <Personaje
+        v-for="(personaje, i) in personajes"
+        :key="i"
+        :fotoPersonaje="personaje.img"
+        :nombrePersonaje="personaje.nombre"
+      />
+    </section>
     <!-- Mensaje error -->
     <p
       v-if="error"
     >Lo sentimos, no hemos podido acceder a los datos solicitados en este momento, intente nuevamente.</p>
-    
   </div>
 </template>
 
@@ -21,7 +27,7 @@ export default {
   data() {
     return {
       personajes: [],
-      error: false
+      error: false,
     };
   },
   mounted() {
@@ -50,7 +56,6 @@ export default {
   margin: 0;
   box-sizing: content-box;
 }
-
 body {
   min-height: 100vh;
   background-color: #000;
@@ -60,5 +65,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #97ce4c;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.card-wrapper{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 </style>

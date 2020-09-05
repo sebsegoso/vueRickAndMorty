@@ -21,14 +21,20 @@ export default {
 body {
   .card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     color: #000;
     background-color: #97ce4c;
-
-    width: 35%;
+    opacity: .95;
     padding: 20px 0;
     border-radius: 15px;
+    margin: 5px;
+    transition: all .5s;
+    &:hover{
+        opacity: 1;
+        box-shadow: 0 0 30px #FFF;
+    }
     img {
       border-radius: 50%;
       max-width: 40%;
