@@ -9,6 +9,7 @@
         :nombrePersonaje="personaje.nombre"
       />
     </section>
+
     <!-- Mensaje error -->
     <p
       v-if="error"
@@ -66,10 +67,10 @@ body {
   background-attachment: fixed;
   color: #97ce4c;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-.card-wrapper{
-  display:flex;
+.card-wrapper {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }

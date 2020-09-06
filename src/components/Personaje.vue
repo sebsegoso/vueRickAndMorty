@@ -33,7 +33,7 @@ body {
     transition: all .5s;
     &:hover{
         opacity: 1;
-        box-shadow: 0 0 30px #FFF;
+        box-shadow: 0 0 10px #000,0 0 30px #97ce4c;
     }
     img {
       border-radius: 50%;
